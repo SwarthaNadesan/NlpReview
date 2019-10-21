@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- HTML Codes by Quackit.com -->
+<title>
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {background-color:#483f88;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+h1{font-family:Arial, sans-serif;color:#000000;background-color:#2e3585;}
+p {font-family:Georgia, serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#ffffff;}
+    
+    
+</style>
+</head>
+<body>
+    
+ <form action ="{{ url_for('uploader')}}" method = "post" enctype="multipart/form-data">    
+    <table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td colspan="2" style="width: 50.0000%;">
+        <br>
+          <h1>Movie Sentimental Analysis </h1>
+      </td>     
+    </tr>
+    <tr>
+      <td style="width: 50.0000%;">
+          <label for="Uploa"><bold>Please upload .CSV file</bold></label> 
+         <input type="file" name="file" />  
+         <input type = "submit" value="Upload">  
+        <br>
+      </td>
+      <td style="width: 50.0000%;">
+        <br>
+          
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 50.0000%;">
+        <br>
+           <p>{{ message }}</p>
+      <img src="data:image/png;base64, {{ plot_img }}">  
+      </td>
+      <td style="width: 50.0000%;">
+        <br>
+           <p>{{ message }}</p>
+      <img src="data:image/png;base64, {{ wordcloud_img }}">  
+      </td>
+    </tr>
+  </tbody>
+</table>
+</form>     
+
+<p></p>
+</body>
+</html>
